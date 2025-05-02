@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "easyscriptmod",
+  "version": "${version}",
+  "name": "EasyScriptMod",
+  "description": "mod inspired by lololoshka's plot system",
+  "authors": [],
+  "contact": {},
+  "license": "unlicense",
+  "icon": "assets/easyscriptmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.t_smovzh.easyscriptmod.client.EasyscriptmodClient"
+    ],
+    "main": [
+      "org.t_smovzh.easyscriptmod.Easyscriptmod"
+    ]
+  },
+  "mixins": [
+    "easyscriptmod.mixins.json",
+    {
+      "config": "easyscriptmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-language-kotlin": ">=${kotlin_loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "geckolib": ">=4.7.1"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
